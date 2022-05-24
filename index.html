@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Basti Ui Responsive Video</title>
+    <meta name="description" content="Basti Ui Responsive Video">
+    <meta name="author" content="BastiUi">
+
+    <meta property="og:title" content="Basti Ui Responsive Video">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.youtube.com/BastiUi/">
+    <meta property="og:description" content="Basti Ui Responsive Video POC">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="/custom_icon.jpg" />
+    <link rel="apple-touch-startup-image" href="/screen.jpg">
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <a id="bastiui" href="https://Youtube.com/BastiUi" target="_blank">
+        Proto by @BastiUi
+    </a>
+    <div class="streamCompo">
+        <video data-draggable="true" loop muted playsinline id="source-video-cam">
+            <source src="assets/video/cam.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video loop muted playsinline id="source-video-screen">
+            <source src="assets/video/screen.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('video').click(function (e) {
+            if (e.target.style.objectFit == 'contain') {
+                e.target.style.objectFit = 'cover';
+            } else {
+                e.target.style.objectFit = 'contain';
+            }
+        });
+    </script>
+    <script defer src="assets/js/moveCam.js"></script>
+
+</body>
+
+</html>
