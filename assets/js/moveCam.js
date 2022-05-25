@@ -12,10 +12,8 @@ let cameraLeft = "1vw";
 const dragElement = (elmnt) => {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
-    if (window.innerWidth > window.innerHeight && window.innerWidth / window.innerHeight < 16 / 8) {
-        /* if present, the header is where you move the DIV from:*/
-        elmnt.onmousedown = dragMouseDown;
-    }
+    /* if present, the header is where you move the DIV from:*/
+    elmnt.onmousedown = dragMouseDown;
 
     function dragMouseDown(e) {
         e = e || window.event;
