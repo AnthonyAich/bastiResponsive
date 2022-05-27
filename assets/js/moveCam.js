@@ -15,6 +15,9 @@ const dragElement = (elmnt) => {
     /* if present, the header is where you move the DIV from:*/
     elmnt.onmousedown = dragMouseDown;
 
+    /* on touch */
+    elmnt.ontouchstart = dragMouseDown;
+
     function dragMouseDown(e) {
         e = e || window.event;
         e.preventDefault();
