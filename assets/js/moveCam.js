@@ -17,6 +17,8 @@ const dragElement = (elmnt) => {
 
     /* on touch */
     elmnt.ontouchstart = dragMouseDown;
+    elmnt.ontouchmove = dragMouseDown;
+    elmnt.ontouchend = dragMouseDown;
 
     function dragMouseDown(e) {
         e = e || window.event;
